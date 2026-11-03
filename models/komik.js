@@ -9,11 +9,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
         },
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
         },
         author: {
             type: DataTypes.STRING,
         }
+    }, {
+        tableName: 'komik',
+        freezeTableName: true,
+        timestamps: false
     });
+
     return Komik;
 };
